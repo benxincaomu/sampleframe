@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class AbstractResourceReader implements ResourceReader{
+	/** 资源文件路径列表 */
 	private List<String> resouresPath =new ArrayList<>();
-	private Map<String,String> configVariableMap=new HashMap<>();;
+	/** 配置文件k-v映射 */
+	private Map<String,String> configVariableMap=new HashMap<>();
+	private String basePath="classpath:/";
 
 	@Override
 	public void setReoursesPath(){
